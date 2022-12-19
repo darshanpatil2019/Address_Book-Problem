@@ -21,7 +21,7 @@ public class Contacts {
        setEmail(email);
     }
 
-    //Getters and Setters
+    //Getters and Setters Method
 
     public String getFirstName() {
         return firstName;
