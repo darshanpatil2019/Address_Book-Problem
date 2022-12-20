@@ -13,6 +13,7 @@ public class AddressBookMain {
         main.addPerson();
         main.editPerson();
         main.deletePerson();
+        main.multiplePerson();
     }
 
 
@@ -113,12 +114,39 @@ public class AddressBookMain {
 
             for (int i = 0; i < person.size(); i++) {
                 Contacts p = person.get(i);
-                if (s.equals(p.getFirstName())){
+                if (s.equals(p.getFirstName())) {
                     person.remove(i); // deleting every index position
                 }
             }
             System.out.println("Person Deleted");
             System.out.println(person);
+        }
+    }
+
+    public void multiplePerson() {
+        while (true) {
+            System.out.println("Select Choice \\n1)Add Person\\n2)Edit Person\\n3)Delete Pesron\\n4)Exit");
+
+            int c = sc.nextInt();
+
+            switch (c) {
+                case 1:
+                    addPerson();
+                    break;
+                case 2:
+                    editPerson();
+                    break;
+                case 3:
+                    deletePerson();
+                    break;
+                case 4:
+                    break;
+                default:
+                    System.out.println("Incorrect option");
+            }
+            if (c == 4) {
+                break;
+            }
         }
     }
 }
