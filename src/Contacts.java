@@ -11,14 +11,14 @@ public class Contacts {
     //Parameterized Constructor
 
     public Contacts(String firstName, String lastName, String address, String city, String state, int zipCode, long phoneNumber, String email) {
-       setFirstName(firstName);
-       setLastName(lastName);
-       setAddress(address);
-       setCity(city);
-       setState(state);
-       setZipCode(zipCode);
-       setPhoneNumber(phoneNumber);
-       setEmail(email);
+        setFirstName(firstName);
+        setLastName(lastName);
+        setAddress(address);
+        setCity(city);
+        setState(state);
+        setZipCode(zipCode);
+        setPhoneNumber(phoneNumber);
+        setEmail(email);
     }
 
     //Getters and Setters Method
