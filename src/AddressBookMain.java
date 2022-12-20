@@ -12,6 +12,7 @@ public class AddressBookMain {
         AddressBookMain main = new AddressBookMain();
         main.addPerson();
         main.editPerson();
+        main.deletePerson();
     }
 
 
@@ -98,6 +99,26 @@ public class AddressBookMain {
                     System.out.println(person);
                 }
             }
+        }
+    }
+
+    // Deleting Contact From address Book
+    public void deletePerson() {
+        System.out.println("Do You Want to Delete person (Yes / No)");
+        String c = sc.next();
+
+        if (c.equals("Yes")) {
+            System.out.println("Enter name to Delete person");
+            String s = sc.next();
+
+            for (int i = 0; i < person.size(); i++) {
+                Contacts p = person.get(i);
+                if (s.equals(p.getFirstName())){
+                    person.remove(i); // deleting every index position
+                }
+            }
+            System.out.println("Person Deleted");
+            System.out.println(person);
         }
     }
 }
